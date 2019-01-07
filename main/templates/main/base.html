@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">    
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_APP_KEY&libraries=visualization&region=RU"></script>		
+	    <script type="text/javascript" src="{% static '/js/map.js' %}"></script>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    	<link rel="stylesheet" href="{% static '/css/style.css' %}">
+	</head>
+	<body>
+	 	<div class="container-fluid">
+	 		<h1 class="text-center"><a href="/">Points of interest</a></h1>
+	 		<div class="row">
+	            <div class="col-md-12">
+	                {% block content %}
+                	{% endblock %}
+	            </div>
+	        </div>
+	    </div>
+	</body>
+</html>

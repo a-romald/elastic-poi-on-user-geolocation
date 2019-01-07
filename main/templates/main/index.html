@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+ {% block content %}
+ 	<div id="filter_map" style="width:100%; margin-bottom: 10px;">
+        <div style="float:left; width:25%;"><label for="checkAll" style="display:inline;"><input id="checkAll" type="checkbox" value="checkAll" style="display:inline; margin-right: 5px;" onChange="toggleAllMarkers()" checked>Show all poi</label></div>
+        <div style="float:left; width:25%;"><label for="checkMuseum" style="display:inline;"><input id="checkMuseum" type="checkbox" value="museum" class="gmarker" style="display:inline; margin-right: 5px;" onChange="toggleMarkers()" >Museums</label></div>
+        <div style="float:left; width:25%;"><label for="checkAirport" style="display:inline;"><input id="checkAirport" type="checkbox" value="airport" class="gmarker" style="display:inline; margin-right: 5px;" onChange="toggleMarkers()" >Airports & helipads</label></div>
+        <div style="float:left; width:25%;"><label for="checkHotel" style="display:inline;"><input id="checkHotel" type="checkbox" value="hotel" class="gmarker" style="display:inline; margin-right: 5px;" onChange="toggleMarkers()" >Hotels</label></div>       
+        <br style="clear:both;"/>
+    </div>
+    <div id="map"></div>    
+{% endblock content %}
